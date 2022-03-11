@@ -60,23 +60,34 @@ loadregs:
 
 	// Load first 4 args into correspondent registers.
 	MOVQ	0(SI), CX
+	BYTE $0x90			//NOP
 	MOVQ	8(SI), DX
+	BYTE $0x90			//NOP
 	MOVQ	16(SI), R8
+	BYTE $0x90			//NOP
 	MOVQ	24(SI), R9
+	BYTE $0x90			//NOP
 	// Floating point arguments are passed in the XMM
 	// registers. Set them here in case any of the arguments
 	// are floating point values. For details see
 	//	https://msdn.microsoft.com/en-us/library/zthk2dkh.aspx
 	MOVQ	CX, X0
+	BYTE $0x90			//NOP
 	MOVQ	DX, X1
+	BYTE $0x90			//NOP
 	MOVQ	R8, X2
+	BYTE $0x90			//NOP
 	MOVQ	R9, X3
+	BYTE $0x90			//NOP
 
     //mov r10, rax
 	MOVQ CX, R10
+	BYTE $0x90			//NOP
 
     //syscall;ret
     CALL R15
+
+    BYTE $0x90			//NOP
 
     ADDQ	$((maxargs)*8), SP
 
