@@ -59,4 +59,6 @@ https://golang.org/src/runtime/sys_windows_amd64.s
 
 https://github.com/helpsystems/nanodump/blob/main/source/syscalls-asm.asm
 
+https://github.com/am0nsec/HellsGate/ 
+
 
