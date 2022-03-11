@@ -3,7 +3,9 @@ Golang implementation of Hellsgate + Halosgate/Tartarosgate. Ensures that all sy
 
 这只是 Hellsgate + Halosgate/Tartarusgate 的另一种实现。
 
-但是，此实现确保所有系统调用仍通过 ntdll.dll来避免使用直接系统调用。为此，我将 ntdll 解析为非挂钩系统调用存根并重用现有syscall;ret指令——因此是该项目的名称。
+但是，此实现确保所有系统调用仍通过 ntdll.dll来避免使用直接系统调用。
+
+为此，我解析 ntdll 中未被挂钩的sysid 并重用现有syscall;ret指令——因此是该项目的名称。
 
 这可能会绕过一些试图检测异常系统调用的 EDR。
 
