@@ -42,20 +42,9 @@ func main() {
 
 
 	//callAddr := recycled.GetCall("",nil,nil)
-	//callAddr := recycled.GetCall("NtDelayExecution",nil,str2sha1)
+	//callAddr := recycled.GetCall(str2sha1("NtDelayExecution"),nil,str2sha1)
 	callAddr := recycled.GetCall("",hashhooked,str2sha1)
-
-
-	/*
-		pc0 := eggreplace.FindAndReplace(
-			[]byte{0x65, 0x67, 0x67, 0x63, 0x61, 0x6c, 0x6c},
-			[]byte{0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90},
-			reflect.ValueOf(eggcall.HgSyscall).Pointer())
-		fmt.Println(pc0)
-
-	*/
-
-	//syscall.Syscall6(reflect.ValueOf(eggcall.HgSyscall).Pointer(), 4, uintptr(sleep1), callAddr, 0, uintptr(unsafe.Pointer(&times)), 0, 0)
+	
 	r, e1 := recycled.HgSyscall(sleep1, callAddr, 0, uintptr(unsafe.Pointer(&times)))
 	fmt.Println(r)
 	fmt.Println(e1)
