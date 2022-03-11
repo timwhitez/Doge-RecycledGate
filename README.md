@@ -45,3 +45,4 @@ The sample program can be found in the example folder
 - 加入了blacklist排除选项
 - 加入了可选的指定syscall;ret api
 - 优化了更加友好的调用方式
+- 加入NOP混淆
