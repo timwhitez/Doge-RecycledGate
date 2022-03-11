@@ -51,8 +51,11 @@ func main() {
 	callAddr := recycled.GetCall("",hashhooked,str2sha1)
 
 	r, e1 := recycled.HgSyscall(sleep1, callAddr, 0, uintptr(unsafe.Pointer(&times)))
-	fmt.Println(r)
-	fmt.Println(e1)
+	if e1 != nil{
+		fmt.Println(r)
+		fmt.Println(e1)
+	}
+
 }
 
 
