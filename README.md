@@ -40,7 +40,8 @@ The sample program can be found in the example folder
 ## 优化细节
 相比原实现，
 
-- 加入了随机syscall;ret
+- 加入了随机选取syscall;ret
 - 加入了自定义hash函数支持
 - 加入了blacklist排除选项
 - 加入了可选的指定syscall;ret api
+- 优化了更加友好的调用方式
