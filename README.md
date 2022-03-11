@@ -52,8 +52,11 @@ The sample program can be found in the example folder
 
 ## Reference
 https://github.com/thefLink/RecycledGate
+
 https://github.com/C-Sto/BananaPhone
+
 https://golang.org/src/runtime/sys_windows_amd64.s
+
 https://github.com/helpsystems/nanodump/blob/main/source/syscalls-asm.asm
 
 
