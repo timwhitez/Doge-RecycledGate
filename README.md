@@ -1,6 +1,22 @@
 # Doge-RecycledGate
 Golang implementation of Hellsgate + Halosgate/Tartarosgate. Ensures that all systemcalls go through ntdll.dll; 
 
+这只是 Hellsgate + Halosgate/Tartarusgate 的另一种实现。
+
+但是，此实现确保所有系统调用仍通过 ntdll.dll来避免使用直接系统调用。为此，我将 ntdll 解析为非挂钩系统调用存根并重用现有syscall;ret指令——因此是该项目的名称。
+
+这可能会绕过一些试图检测异常系统调用的 EDR。
+
+示例程序可以在example文件夹中找到
+
+
+This is just another implementation of Hellsgate + Halosgate/Tartarusgate.
+
+However, this implementation makes sure that all system calls still go through ntdll.dll to avoid the usage of direct systemcalls. To do so, I parse the ntdll for nonhooked syscall-stubs and re-use existing syscall;ret instructions - thus the name of this project.
+
+This probably bypasses some EDR trying to detect abnormal systemcalls.
+
+The sample program can be found in the example folder
 
 ## Usage
 ```
