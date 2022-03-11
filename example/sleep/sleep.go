@@ -1,11 +1,9 @@
 package main
 
 import (
-	"bufio"
 	"crypto/sha1"
 	"fmt"
 	"github.com/timwhitez/Doge-RecycledGate/pkg/recycled"
-	"os"
 	"unsafe"
 )
 
@@ -37,14 +35,21 @@ func main() {
 
 	//hellsgate syscall
 
-	fmt.Print("Press 'Enter' to continue...")
-	bufio.NewReader(os.Stdin).ReadBytes('\n')
+	//fmt.Print("Press 'Enter' to continue...")
+	//bufio.NewReader(os.Stdin).ReadBytes('\n')
+
+
+
+	//hash("NtDelayExecution")
+	//strings.ToLower(hash("NtDelayExecution"))
+	//hash(strings.ToLower("NtDelayExecution"))
+	//strings.ToLower(hash(strings.ToLower("NtDelayExecution")))
 
 
 	//callAddr := recycled.GetCall("",nil,nil)
 	//callAddr := recycled.GetCall(str2sha1("NtDelayExecution"),nil,str2sha1)
 	callAddr := recycled.GetCall("",hashhooked,str2sha1)
-	
+
 	r, e1 := recycled.HgSyscall(sleep1, callAddr, 0, uintptr(unsafe.Pointer(&times)))
 	fmt.Println(r)
 	fmt.Println(e1)
