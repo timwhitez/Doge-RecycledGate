@@ -36,3 +36,11 @@ The sample program can be found in the example folder
 	  fmt.Println(e1)
   }
 ```
+
+## 优化细节
+相比原实现，
+
+- 加入了随机syscall;ret
+- 加入了自定义hash函数支持
+- 加入了blacklist排除选项
+- 加入了可选的指定syscall;ret api
