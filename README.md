@@ -29,6 +29,7 @@ The sample program can be found in the example folder
 	}
 
 	//callAddr := recycled.GetCall("",nil,nil)
+	//获取syscall;ret 地址
 	callAddr := recycled.GetCall("NtDelayExecution",nil,nil)
   //callAddr := recycled.GetCall("",apiblacklist,str2sha1)
 
