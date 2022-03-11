@@ -48,3 +48,12 @@ The sample program can be found in the example folder
 - 加入了可选的指定syscall;ret api
 - 优化了更加友好的调用方式
 - 加入NOP混淆
+
+
+## Reference
+https://github.com/thefLink/RecycledGate
+https://github.com/C-Sto/BananaPhone
+https://golang.org/src/runtime/sys_windows_amd64.s
+https://github.com/helpsystems/nanodump/blob/main/source/syscalls-asm.asm
+
+
