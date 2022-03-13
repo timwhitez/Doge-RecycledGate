@@ -6,7 +6,6 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/timwhitez/Doge-RecycledGate/pkg/recycled"
-	_ "runtime/cgo"
 	"syscall"
 	"unsafe"
 )
