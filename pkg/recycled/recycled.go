@@ -9,7 +9,6 @@ import (
 
 	"strings"
 
-	_ "runtime/cgo"
 	"unsafe"
 
 	"github.com/Binject/debug/pe"
